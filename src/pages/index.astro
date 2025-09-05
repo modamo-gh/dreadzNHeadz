@@ -1,17 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
-	<div class="grid grid-cols-2 grid-rows-10 relative h-screen w-screen">
+	<div
+		class="grid grid-cols-2 grid-rows-10 px-4 py-2 relative h-screen w-screen"
+	>
 		<div
 			class="absolute bg-cover inset-0"
 			style={{ backgroundImage: "url('/background.png')" }}
 		>
 		</div>
-		<div class="col-span-2 row-span-1"></div>
-		<div class="col-span-1 row-span-8"></div>
-		<div class="col-span-1 row-span-8"></div>
+		<nav
+			class="col-span-2 flex font-heading items-center justify-between row-span-1 text-amber-500 z-10"
+		>
+			<a href="/"
+				><Image
+					alt="Low Poly illustration of a Black woman with locs"
+					class="aspect-square h-full object-contain"
+					height={100}
+					loading="eager"
+					src="/logo.png"
+					width={100}
+				/></a
+			>
+			<ul class="bg-[#191917] flex font-bold gap-6 p-2 rounded tracking-wide">
+				<li class="text-2xl"><a href="/">Home</a></li>
+				<li class="text-2xl"><a href="/">Prices</a></li>
+				<li class="text-2xl"><a href="/">Events</a></li>
+				<li class="text-2xl"><a href="/">Hours and Location</a></li>
+				<li class="text-2xl"><a href="/">Styles</a></li>
+				<li class="text-2xl"><a href="/">Products</a></li>
+			</ul>
+		</nav>
+		<div
+			class="col-span-1 flex items-center justify-center row-span-8 text-amber-500 z-10"
+		>
+			<h3 class="bg-[#191917] font-bold p-2 rounded text-4xl">Where every strand tells a story</h3>
+		</div>
+		<div
+			class="flex col-span-1 items-center justify-center row-span-8 z-10"
+		>
+			<Image
+				alt="Stylized low-poly profile of a Black woman with locs and gold earrings"
+				class="h-full object-contain"
+				height={800}
+				loading="eager"
+				src="/model.png"
+				width={800}
+			/>
+		</div>
 		<div class="col-span-2 row-span-1"></div>
 	</div>
 </Layout>
